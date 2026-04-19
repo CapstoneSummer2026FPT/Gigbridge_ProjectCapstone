@@ -108,3 +108,5 @@ GigBridge/Infrastructure/Persistence/Configurations/.gitkeep
 GigBridge/Domain/Enums/.gitkeep
 GigBridge/.vs/GigBridge/v17/.wsuo
 .skillsrc
+*.db-shm
+*.db-wal

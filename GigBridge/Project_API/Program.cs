@@ -1,8 +1,6 @@
 using Application;
-using Application.Common.Interfaces;
 using Infrastructure;
 using Project_API.Filters;
-using Project_API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
