@@ -5,7 +5,7 @@ namespace Domain.Entities;
 
 public partial class User
 {
-    public Guid UsrUserId { get; set; }
+    public Guid UserId { get; set; }
 
     public string FullName { get; set; } = null!;
 
@@ -34,9 +34,9 @@ public partial class User
 
     public virtual ClientProfile? ClientProfile { get; set; }
 
-    public virtual ICollection<Conversation> ConversationUsrUser1s { get; set; } = new List<Conversation>();
+    public virtual ICollection<Conversation> ConversationUser1s { get; set; } = new List<Conversation>();
 
-    public virtual ICollection<Conversation> ConversationUsrUser2s { get; set; } = new List<Conversation>();
+    public virtual ICollection<Conversation> ConversationUser2s { get; set; } = new List<Conversation>();
 
     public virtual ICollection<DisputeEvidence> DisputeEvidences { get; set; } = new List<DisputeEvidence>();
 
@@ -44,7 +44,7 @@ public partial class User
 
     public virtual ICollection<Dispute> DisputeResolvedByAdmins { get; set; } = new List<Dispute>();
 
-    public virtual ICollection<Dispute> DisputeUsrInitiators { get; set; } = new List<Dispute>();
+    public virtual ICollection<Dispute> DisputeInitiators { get; set; } = new List<Dispute>();
 
     public virtual ICollection<EsignAuditTrail> EsignAuditTrails { get; set; } = new List<EsignAuditTrail>();
 
@@ -68,11 +68,11 @@ public partial class User
 
     public virtual ICollection<Report> ReportResolvedByAdmins { get; set; } = new List<Report>();
 
-    public virtual ICollection<Report> ReportUsrReporters { get; set; } = new List<Report>();
+    public virtual ICollection<Report> ReportReporters { get; set; } = new List<Report>();
 
-    public virtual ICollection<Review> ReviewUsrReviewees { get; set; } = new List<Review>();
+    public virtual ICollection<Review> ReviewReviewees { get; set; } = new List<Review>();
 
-    public virtual ICollection<Review> ReviewUsrReviewers { get; set; } = new List<Review>();
+    public virtual ICollection<Review> ReviewReviewers { get; set; } = new List<Review>();
 
     public virtual ICollection<SavedFreelancer> SavedFreelancers { get; set; } = new List<SavedFreelancer>();
 

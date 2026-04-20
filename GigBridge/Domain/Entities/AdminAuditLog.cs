@@ -5,9 +5,9 @@ namespace Domain.Entities;
 
 public partial class AdminAuditLog
 {
-    public Guid AalAdminAuditLogsId { get; set; }
+    public Guid AdminAuditLogsId { get; set; }
 
-    public Guid UsrAdminId { get; set; }
+    public Guid AdminId { get; set; }
 
     public string Action { get; set; } = null!;
 
@@ -25,5 +25,5 @@ public partial class AdminAuditLog
 
     public DateTime CreatedAt { get; set; }
 
-    public virtual User UsrAdmin { get; set; } = null!;
+    public virtual User Admin { get; set; } = null!;
 }

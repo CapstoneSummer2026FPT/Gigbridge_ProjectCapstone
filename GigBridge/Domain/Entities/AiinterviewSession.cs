@@ -5,15 +5,15 @@ namespace Domain.Entities;
 
 public partial class AiinterviewSession
 {
-    public Guid AiIntvAiinterviewSessionsId { get; set; }
+    public Guid AiinterviewSessionsId { get; set; }
 
-    public Guid JpJobPostsId { get; set; }
+    public Guid JobPostsId { get; set; }
 
-    public Guid ClProClientProfilesId { get; set; }
+    public Guid ClientProfilesId { get; set; }
 
-    public Guid FlProFreelancerProfilesId { get; set; }
+    public Guid FreelancerProfilesId { get; set; }
 
-    public Guid? PropoProposalsId { get; set; }
+    public Guid? ProposalsId { get; set; }
 
     /// <summary>
     /// Enum InterviewStatus: 0=Pending, 1=InProgress, 2=Completed, 3=Cancelled
@@ -34,11 +34,11 @@ public partial class AiinterviewSession
 
     public virtual ICollection<AiinterviewQuestion> AiinterviewQuestions { get; set; } = new List<AiinterviewQuestion>();
 
-    public virtual ClientProfile ClProClientProfiles { get; set; } = null!;
+    public virtual ClientProfile ClientProfiles { get; set; } = null!;
 
-    public virtual FreelancerProfile FlProFreelancerProfiles { get; set; } = null!;
+    public virtual FreelancerProfile FreelancerProfiles { get; set; } = null!;
 
-    public virtual JobPost JpJobPosts { get; set; } = null!;
+    public virtual JobPost JobPosts { get; set; } = null!;
 
-    public virtual Proposal? PropoProposals { get; set; }
+    public virtual Proposal? Proposals { get; set; }
 }

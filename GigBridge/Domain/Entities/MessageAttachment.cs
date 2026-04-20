@@ -5,9 +5,9 @@ namespace Domain.Entities;
 
 public partial class MessageAttachment
 {
-    public Guid MsgAttachMessageAttachmentsId { get; set; }
+    public Guid MessageAttachmentsId { get; set; }
 
-    public Guid MsgMessagesId { get; set; }
+    public Guid MessagesId { get; set; }
 
     public string FileName { get; set; } = null!;
 
@@ -19,5 +19,5 @@ public partial class MessageAttachment
 
     public DateTime CreatedAt { get; set; }
 
-    public virtual Message MsgMessages { get; set; } = null!;
+    public virtual Message Messages { get; set; } = null!;
 }

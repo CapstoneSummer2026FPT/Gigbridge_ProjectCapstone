@@ -5,15 +5,15 @@ namespace Domain.Entities;
 
 public partial class SavedJob
 {
-    public Guid SjSavedJobsId { get; set; }
+    public Guid SavedJobsId { get; set; }
 
-    public Guid UsrUserId { get; set; }
+    public Guid UserId { get; set; }
 
-    public Guid JpJobPostsId { get; set; }
+    public Guid JobPostsId { get; set; }
 
     public DateTime CreatedAt { get; set; }
 
-    public virtual JobPost JpJobPosts { get; set; } = null!;
+    public virtual JobPost JobPosts { get; set; } = null!;
 
-    public virtual User UsrUser { get; set; } = null!;
+    public virtual User User { get; set; } = null!;
 }

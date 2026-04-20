@@ -5,13 +5,13 @@ namespace Domain.Entities;
 
 public partial class EsignDocument
 {
-    public Guid EDocEsignDocumentsId { get; set; }
+    public Guid EsignDocumentsId { get; set; }
 
-    public Guid ETplEsignTemplatesId { get; set; }
+    public Guid EsignTemplatesId { get; set; }
 
-    public Guid JpJobPostsId { get; set; }
+    public Guid JobPostsId { get; set; }
 
-    public Guid? ContContractsId { get; set; }
+    public Guid? ContractsId { get; set; }
 
     public string DocumentCode { get; set; } = null!;
 
@@ -34,13 +34,13 @@ public partial class EsignDocument
 
     public DateTime? UpdatedAt { get; set; }
 
-    public virtual Contract? ContContracts { get; set; }
+    public virtual Contract? Contracts { get; set; }
 
-    public virtual EsignTemplate ETplEsignTemplates { get; set; } = null!;
+    public virtual EsignTemplate EsignTemplates { get; set; } = null!;
 
     public virtual ICollection<EsignAuditTrail> EsignAuditTrails { get; set; } = new List<EsignAuditTrail>();
 
     public virtual ICollection<EsignSignature> EsignSignatures { get; set; } = new List<EsignSignature>();
 
-    public virtual JobPost JpJobPosts { get; set; } = null!;
+    public virtual JobPost JobPosts { get; set; } = null!;
 }

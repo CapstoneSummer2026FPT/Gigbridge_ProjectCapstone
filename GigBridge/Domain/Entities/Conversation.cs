@@ -5,13 +5,13 @@ namespace Domain.Entities;
 
 public partial class Conversation
 {
-    public Guid ConvConversationsId { get; set; }
+    public Guid ConversationsId { get; set; }
 
-    public Guid UsrUser1Id { get; set; }
+    public Guid User1Id { get; set; }
 
-    public Guid UsrUser2Id { get; set; }
+    public Guid User2Id { get; set; }
 
-    public Guid? ContContractsId { get; set; }
+    public Guid? ContractsId { get; set; }
 
     /// <summary>
     /// Enum ConversationType: 0=DirectMessage, 1=ContractChat
@@ -24,11 +24,11 @@ public partial class Conversation
 
     public DateTime? UpdatedAt { get; set; }
 
-    public virtual Contract? ContContracts { get; set; }
+    public virtual Contract? Contracts { get; set; }
 
     public virtual ICollection<Message> Messages { get; set; } = new List<Message>();
 
-    public virtual User UsrUser1 { get; set; } = null!;
+    public virtual User User1 { get; set; } = null!;
 
-    public virtual User UsrUser2 { get; set; } = null!;
+    public virtual User User2 { get; set; } = null!;
 }

@@ -5,7 +5,7 @@ namespace Domain.Entities;
 
 public partial class Faqcategory
 {
-    public Guid FaqCatFaqcategoriesId { get; set; }
+    public Guid FaqcategoriesId { get; set; }
 
     public string Name { get; set; } = null!;
 

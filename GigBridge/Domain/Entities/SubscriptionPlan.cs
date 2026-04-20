@@ -5,7 +5,7 @@ namespace Domain.Entities;
 
 public partial class SubscriptionPlan
 {
-    public Guid SubPlanSubscriptionPlansId { get; set; }
+    public Guid SubscriptionPlansId { get; set; }
 
     public string Name { get; set; } = null!;
 

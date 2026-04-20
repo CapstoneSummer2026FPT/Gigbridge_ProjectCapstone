@@ -5,9 +5,9 @@ namespace Domain.Entities;
 
 public partial class PortfolioItem
 {
-    public Guid PiPortfolioItemsId { get; set; }
+    public Guid PortfolioItemsId { get; set; }
 
-    public Guid FlFreelancerId { get; set; }
+    public Guid FreelancerId { get; set; }
 
     public string Title { get; set; } = null!;
 
@@ -23,5 +23,5 @@ public partial class PortfolioItem
 
     public virtual Category? Category { get; set; }
 
-    public virtual FreelancerProfile FlFreelancer { get; set; } = null!;
+    public virtual FreelancerProfile Freelancer { get; set; } = null!;
 }
