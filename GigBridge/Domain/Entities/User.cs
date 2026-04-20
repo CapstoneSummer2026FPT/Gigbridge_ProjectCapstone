@@ -1,0 +1,82 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace Domain.Entities;
+
+public partial class User
+{
+    public Guid UsrUserId { get; set; }
+
+    public string FullName { get; set; } = null!;
+
+    public string? Avatar { get; set; }
+
+    public string? PhoneNumber { get; set; }
+
+    /// <summary>
+    /// Enum UserRole: 0=Client, 1=Freelancer, 2=Admin
+    /// </summary>
+    public int Role { get; set; }
+
+    public bool IsEmailVerified { get; set; }
+
+    public bool IsActive { get; set; }
+
+    public string? PreferredLanguage { get; set; }
+
+    public DateTime CreatedAt { get; set; }
+
+    public DateTime? UpdatedAt { get; set; }
+
+    public virtual ICollection<AdminAuditLog> AdminAuditLogs { get; set; } = new List<AdminAuditLog>();
+
+    public virtual ICollection<AiconversationSession> AiconversationSessions { get; set; } = new List<AiconversationSession>();
+
+    public virtual ClientProfile? ClientProfile { get; set; }
+
+    public virtual ICollection<Conversation> ConversationUsrUser1s { get; set; } = new List<Conversation>();
+
+    public virtual ICollection<Conversation> ConversationUsrUser2s { get; set; } = new List<Conversation>();
+
+    public virtual ICollection<DisputeEvidence> DisputeEvidences { get; set; } = new List<DisputeEvidence>();
+
+    public virtual ICollection<DisputeMessage> DisputeMessages { get; set; } = new List<DisputeMessage>();
+
+    public virtual ICollection<Dispute> DisputeResolvedByAdmins { get; set; } = new List<Dispute>();
+
+    public virtual ICollection<Dispute> DisputeUsrInitiators { get; set; } = new List<Dispute>();
+
+    public virtual ICollection<EsignAuditTrail> EsignAuditTrails { get; set; } = new List<EsignAuditTrail>();
+
+    public virtual ICollection<EsignSignature> EsignSignatures { get; set; } = new List<EsignSignature>();
+
+    public virtual ICollection<EsignTemplate> EsignTemplates { get; set; } = new List<EsignTemplate>();
+
+    public virtual FreelancerProfile? FreelancerProfile { get; set; }
+
+    public virtual ICollection<Message> Messages { get; set; } = new List<Message>();
+
+    public virtual ICollection<MilestoneAttachment> MilestoneAttachments { get; set; } = new List<MilestoneAttachment>();
+
+    public virtual ICollection<Notification> Notifications { get; set; } = new List<Notification>();
+
+    public virtual ICollection<PaymentProof> PaymentProofs { get; set; } = new List<PaymentProof>();
+
+    public virtual ICollection<PlatformSetting> PlatformSettings { get; set; } = new List<PlatformSetting>();
+
+    public virtual ICollection<RefreshToken> RefreshTokens { get; set; } = new List<RefreshToken>();
+
+    public virtual ICollection<Report> ReportResolvedByAdmins { get; set; } = new List<Report>();
+
+    public virtual ICollection<Report> ReportUsrReporters { get; set; } = new List<Report>();
+
+    public virtual ICollection<Review> ReviewUsrReviewees { get; set; } = new List<Review>();
+
+    public virtual ICollection<Review> ReviewUsrReviewers { get; set; } = new List<Review>();
+
+    public virtual ICollection<SavedFreelancer> SavedFreelancers { get; set; } = new List<SavedFreelancer>();
+
+    public virtual ICollection<SavedJob> SavedJobs { get; set; } = new List<SavedJob>();
+
+    public virtual ICollection<Subscription> Subscriptions { get; set; } = new List<Subscription>();
+}

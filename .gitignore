@@ -110,3 +110,4 @@ GigBridge/.vs/GigBridge/v17/.wsuo
 .skillsrc
 *.db-shm
 *.db-wal
+*.sql
