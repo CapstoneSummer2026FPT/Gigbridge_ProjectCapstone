@@ -5,9 +5,9 @@ namespace Domain.Entities;
 
 public partial class AiconversationSession
 {
-    public Guid AiSessAiconversationSessionsId { get; set; }
+    public Guid AiconversationSessionsId { get; set; }
 
-    public Guid UsrUserId { get; set; }
+    public Guid UserId { get; set; }
 
     /// <summary>
     /// Enum AISessionType: 0=WorkAssistant, 1=ProfileOptimizer, 2=JobPostGenerator, 3=ProposalGenerator
@@ -16,9 +16,9 @@ public partial class AiconversationSession
 
     public string? Title { get; set; }
 
-    public Guid? ContContractsId { get; set; }
+    public Guid? ContractsId { get; set; }
 
-    public Guid? JpJobPostsId { get; set; }
+    public Guid? JobPostsId { get; set; }
 
     public string? ModelUsed { get; set; }
 
@@ -32,9 +32,9 @@ public partial class AiconversationSession
 
     public virtual ICollection<Aimessage> Aimessages { get; set; } = new List<Aimessage>();
 
-    public virtual Contract? ContContracts { get; set; }
+    public virtual Contract? Contracts { get; set; }
 
-    public virtual JobPost? JpJobPosts { get; set; }
+    public virtual JobPost? JobPosts { get; set; }
 
-    public virtual User UsrUser { get; set; } = null!;
+    public virtual User User { get; set; } = null!;
 }

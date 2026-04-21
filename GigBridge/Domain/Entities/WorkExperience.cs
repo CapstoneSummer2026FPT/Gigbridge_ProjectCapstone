@@ -5,9 +5,9 @@ namespace Domain.Entities;
 
 public partial class WorkExperience
 {
-    public Guid WeWorkExperiencesId { get; set; }
+    public Guid WorkExperiencesId { get; set; }
 
-    public Guid FlFreelancerId { get; set; }
+    public Guid FreelancerId { get; set; }
 
     public string CompanyName { get; set; } = null!;
 
@@ -21,5 +21,5 @@ public partial class WorkExperience
 
     public bool? IsCurrentJob { get; set; }
 
-    public virtual FreelancerProfile FlFreelancer { get; set; } = null!;
+    public virtual FreelancerProfile Freelancer { get; set; } = null!;
 }

@@ -5,9 +5,9 @@ namespace Domain.Entities;
 
 public partial class AiinterviewQuestion
 {
-    public Guid AiQAiinterviewQuestionsId { get; set; }
+    public Guid AiinterviewQuestionsId { get; set; }
 
-    public Guid AiIntvAiinterviewSessionsId { get; set; }
+    public Guid AiinterviewSessionsId { get; set; }
 
     public string Question { get; set; } = null!;
 
@@ -23,5 +23,5 @@ public partial class AiinterviewQuestion
 
     public DateTime CreatedAt { get; set; }
 
-    public virtual AiinterviewSession AiIntvAiinterviewSessions { get; set; } = null!;
+    public virtual AiinterviewSession AiinterviewSessions { get; set; } = null!;
 }

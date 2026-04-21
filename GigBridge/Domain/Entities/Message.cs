@@ -5,11 +5,11 @@ namespace Domain.Entities;
 
 public partial class Message
 {
-    public Guid MsgMessagesId { get; set; }
+    public Guid MessagesId { get; set; }
 
-    public Guid ConvConversationsId { get; set; }
+    public Guid ConversationsId { get; set; }
 
-    public Guid UsrSenderId { get; set; }
+    public Guid SenderId { get; set; }
 
     public string? Content { get; set; }
 
@@ -28,9 +28,9 @@ public partial class Message
 
     public DateTime? UpdatedAt { get; set; }
 
-    public virtual Conversation ConvConversations { get; set; } = null!;
+    public virtual Conversation Conversations { get; set; } = null!;
 
     public virtual ICollection<MessageAttachment> MessageAttachments { get; set; } = new List<MessageAttachment>();
 
-    public virtual User UsrSender { get; set; } = null!;
+    public virtual User Sender { get; set; } = null!;
 }

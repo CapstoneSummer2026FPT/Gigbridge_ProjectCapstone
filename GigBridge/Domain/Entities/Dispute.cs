@@ -5,13 +5,13 @@ namespace Domain.Entities;
 
 public partial class Dispute
 {
-    public Guid DispDisputesId { get; set; }
+    public Guid DisputesId { get; set; }
 
-    public Guid ContContractsId { get; set; }
+    public Guid ContractsId { get; set; }
 
-    public Guid UsrInitiatorId { get; set; }
+    public Guid InitiatorId { get; set; }
 
-    public Guid? MStoneMilestonesId { get; set; }
+    public Guid? MilestonesId { get; set; }
 
     public string Reason { get; set; } = null!;
 
@@ -35,15 +35,15 @@ public partial class Dispute
 
     public DateTime? UpdatedAt { get; set; }
 
-    public virtual Contract ContContracts { get; set; } = null!;
+    public virtual Contract Contracts { get; set; } = null!;
 
     public virtual ICollection<DisputeEvidence> DisputeEvidences { get; set; } = new List<DisputeEvidence>();
 
     public virtual ICollection<DisputeMessage> DisputeMessages { get; set; } = new List<DisputeMessage>();
 
-    public virtual Milestone? MStoneMilestones { get; set; }
+    public virtual Milestone? Milestones { get; set; }
 
     public virtual User? ResolvedByAdmin { get; set; }
 
-    public virtual User UsrInitiator { get; set; } = null!;
+    public virtual User Initiator { get; set; } = null!;
 }

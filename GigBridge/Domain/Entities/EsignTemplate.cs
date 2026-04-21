@@ -5,7 +5,7 @@ namespace Domain.Entities;
 
 public partial class EsignTemplate
 {
-    public Guid ETplEsignTemplatesId { get; set; }
+    public Guid EsignTemplatesId { get; set; }
 
     public string Name { get; set; } = null!;
 

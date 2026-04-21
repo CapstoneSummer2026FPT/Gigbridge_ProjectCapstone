@@ -5,9 +5,9 @@ namespace Domain.Entities;
 
 public partial class MilestoneAttachment
 {
-    public Guid MStoneAttachMilestoneAttachmentsId { get; set; }
+    public Guid MilestoneAttachmentsId { get; set; }
 
-    public Guid MStoneMilestonesId { get; set; }
+    public Guid MilestonesId { get; set; }
 
     public string FileName { get; set; } = null!;
 
@@ -19,7 +19,7 @@ public partial class MilestoneAttachment
 
     public DateTime CreatedAt { get; set; }
 
-    public virtual Milestone MStoneMilestones { get; set; } = null!;
+    public virtual Milestone Milestones { get; set; } = null!;
 
     public virtual User? UploadedByUser { get; set; }
 }
