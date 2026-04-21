@@ -1,4 +1,5 @@
 using Application.Common.Interfaces;
+using Application.Common.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Project_API.Controllers;
@@ -21,19 +22,30 @@ public class AuthController : ControllerBase
 
         if (token == null)
         {
-            return Unauthorized(new { message = "Invalid credentials" });
+            return Unauthorized(ApiResponse<object>.Error(401, "Invalid credentials"));
         }
 
-        return Ok(new { token });
+        return Ok(ApiResponse<object>.Ok(new { token }, "Login successful"));
     }
 
     [HttpGet("test-auth")]
     [Microsoft.AspNetCore.Authorization.Authorize]
     public IActionResult TestAuth()
     {
-        return Ok(new { message = "You are authorized!", user = User.Identity?.Name });
+        var data = new { message = "You are authorized!", user = User.Identity?.Name };
+        return Ok(ApiResponse<object>.Ok(data, "Authorization verified"));
     }
 }
+
+//{
+//  "success": true,
+//  "statusCode": 200,
+//  "message": "Login successful",
+//  "data": { "token": "..." },
+//  "errors": null,
+//  "timestamp": "2026-04-21T17:36:00Z"
+//}
+
 
 public class LoginRequest
 {
