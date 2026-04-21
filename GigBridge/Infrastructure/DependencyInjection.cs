@@ -1,6 +1,5 @@
 using Application.Common.Interfaces;
 using Infrastructure.Persistence;
-using Infrastructure.Persistence.Interceptors;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,15 +13,11 @@ public static class DependencyInjection
         var connectionString = configuration.GetConnectionString("DefaultConnection")
             ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 
-        services.AddScoped<AuditableEntityInterceptor>();
-
-        services.AddDbContext<ApplicationDbContext>((sp, options) =>
-        {
-            options.UseNpgsql(connectionString);
-        });
+        services.AddDbContext<GigbridgeDbContext>(options =>
+            options.UseNpgsql(connectionString));
 
         services.AddScoped<IApplicationDbContext>(provider =>
-            provider.GetRequiredService<ApplicationDbContext>());
+            provider.GetRequiredService<GigbridgeDbContext>());
 
         return services;
     }
