@@ -6,7 +6,6 @@ public class MappingProfile : Profile
 {
     public MappingProfile()
     {
-        // Initial empty mapping profile
-        // CreateMap<User, UserDto>().ReverseMap();
+        // Add mappings here
     }
 }

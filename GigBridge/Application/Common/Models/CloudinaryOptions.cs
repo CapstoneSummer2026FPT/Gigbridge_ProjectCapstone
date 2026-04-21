@@ -1,4 +1,4 @@
-namespace Infrastructure.Common.Options;
+namespace Application.Common.Models;
 
 public class CloudinaryOptions
 {

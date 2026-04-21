@@ -1,4 +1,6 @@
-namespace Application.Common.DTOs;
+using System;
+
+namespace Application.Common.Models;
 
 public class ApiResponse<TData>
 {
@@ -22,10 +24,10 @@ public class ApiResponse<TData>
         };
     }
 
-    public static ApiResponse<TData> Ok(TData data, string message = "Success") =>
+    public static ApiResponse<TData> Ok(TData data, string message) =>
         Create(true, 200, message, data);
 
-    public static ApiResponse<TData> CreatedAt(TData data, string message = "Created") =>
+    public static ApiResponse<TData> CreatedAt(TData data, string message) =>
          Create(true, 201, message, data);
 
     public static ApiResponse<TData> NoContent(string message = "Operation completed successfully") =>
