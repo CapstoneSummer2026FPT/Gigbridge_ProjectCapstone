@@ -5,11 +5,11 @@ namespace Domain.Entities;
 
 public partial class DisputeEvidence
 {
-    public Guid DisputeEvidenceId { get; set; }
+    public Guid DispEvDisputeEvidenceId { get; set; }
 
-    public Guid DisputesId { get; set; }
+    public Guid DispDisputesId { get; set; }
 
-    public Guid UploadedById { get; set; }
+    public Guid UsrUploadedById { get; set; }
 
     public string FileName { get; set; } = null!;
 
@@ -21,7 +21,7 @@ public partial class DisputeEvidence
 
     public DateTime CreatedAt { get; set; }
 
-    public virtual Dispute Disputes { get; set; } = null!;
+    public virtual Dispute DispDisputes { get; set; } = null!;
 
-    public virtual User UploadedBy { get; set; } = null!;
+    public virtual User UsrUploadedBy { get; set; } = null!;
 }

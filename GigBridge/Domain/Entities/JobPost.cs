@@ -5,9 +5,9 @@ namespace Domain.Entities;
 
 public partial class JobPost
 {
-    public Guid JobPostsId { get; set; }
+    public Guid JpJobPostsId { get; set; }
 
-    public Guid ClientProfilesId { get; set; }
+    public Guid ClProClientProfilesId { get; set; }
 
     public string Title { get; set; } = null!;
 
@@ -66,7 +66,7 @@ public partial class JobPost
 
     public virtual Category? Category { get; set; }
 
-    public virtual ClientProfile ClientProfiles { get; set; } = null!;
+    public virtual ClientProfile ClProClientProfiles { get; set; } = null!;
 
     public virtual ICollection<Contract> Contracts { get; set; } = new List<Contract>();
 

@@ -5,9 +5,9 @@ namespace Domain.Entities;
 
 public partial class JobPostAttachment
 {
-    public Guid JobPostAttachmentsId { get; set; }
+    public Guid JpAttachJobPostAttachmentsId { get; set; }
 
-    public Guid JobPostsId { get; set; }
+    public Guid JpJobPostsId { get; set; }
 
     public string FileName { get; set; } = null!;
 
@@ -17,5 +17,5 @@ public partial class JobPostAttachment
 
     public DateTime CreatedAt { get; set; }
 
-    public virtual JobPost JobPosts { get; set; } = null!;
+    public virtual JobPost JpJobPosts { get; set; } = null!;
 }

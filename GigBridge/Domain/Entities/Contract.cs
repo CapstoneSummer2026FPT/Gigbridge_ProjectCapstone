@@ -5,15 +5,15 @@ namespace Domain.Entities;
 
 public partial class Contract
 {
-    public Guid ContractsId { get; set; }
+    public Guid ContContractsId { get; set; }
 
-    public Guid JobPostsId { get; set; }
+    public Guid JpJobPostsId { get; set; }
 
-    public Guid ClientProfilesId { get; set; }
+    public Guid ClProClientProfilesId { get; set; }
 
-    public Guid FreelancerProfilesId { get; set; }
+    public Guid FlProFreelancerProfilesId { get; set; }
 
-    public Guid? ProposalsId { get; set; }
+    public Guid? PropoProposalsId { get; set; }
 
     public string Title { get; set; } = null!;
 
@@ -48,7 +48,7 @@ public partial class Contract
 
     public virtual ICollection<AiconversationSession> AiconversationSessions { get; set; } = new List<AiconversationSession>();
 
-    public virtual ClientProfile ClientProfiles { get; set; } = null!;
+    public virtual ClientProfile ClProClientProfiles { get; set; } = null!;
 
     public virtual ICollection<Conversation> Conversations { get; set; } = new List<Conversation>();
 
@@ -56,13 +56,13 @@ public partial class Contract
 
     public virtual EsignDocument? EsignDocument { get; set; }
 
-    public virtual FreelancerProfile FreelancerProfiles { get; set; } = null!;
+    public virtual FreelancerProfile FlProFreelancerProfiles { get; set; } = null!;
 
-    public virtual JobPost JobPosts { get; set; } = null!;
+    public virtual JobPost JpJobPosts { get; set; } = null!;
 
     public virtual ICollection<Milestone> Milestones { get; set; } = new List<Milestone>();
 
-    public virtual Proposal? Proposals { get; set; }
+    public virtual Proposal? PropoProposals { get; set; }
 
     public virtual ICollection<Review> Reviews { get; set; } = new List<Review>();
 }

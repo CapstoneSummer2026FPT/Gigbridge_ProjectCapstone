@@ -5,11 +5,11 @@ namespace Domain.Entities;
 
 public partial class FreelancerSkill
 {
-    public Guid FreelancerSkillsId { get; set; }
+    public Guid FSkillFreelancerSkillsId { get; set; }
 
-    public Guid FreelancerId { get; set; }
+    public Guid FlFreelancerId { get; set; }
 
-    public Guid SkillsId { get; set; }
+    public Guid SkSkillsId { get; set; }
 
     public int? YearsOfExperience { get; set; }
 
@@ -18,7 +18,7 @@ public partial class FreelancerSkill
     /// </summary>
     public int? ProficiencyLevel { get; set; }
 
-    public virtual FreelancerProfile Freelancer { get; set; } = null!;
+    public virtual FreelancerProfile FlFreelancer { get; set; } = null!;
 
-    public virtual Skill Skills { get; set; } = null!;
+    public virtual Skill SkSkills { get; set; } = null!;
 }

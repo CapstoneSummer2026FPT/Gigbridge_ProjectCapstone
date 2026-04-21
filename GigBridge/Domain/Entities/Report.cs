@@ -5,9 +5,9 @@ namespace Domain.Entities;
 
 public partial class Report
 {
-    public Guid ReportsId { get; set; }
+    public Guid RptReportsId { get; set; }
 
-    public Guid ReporterId { get; set; }
+    public Guid UsrReporterId { get; set; }
 
     public Guid ReportedEntityId { get; set; }
 
@@ -44,5 +44,5 @@ public partial class Report
 
     public virtual User? ResolvedByAdmin { get; set; }
 
-    public virtual User Reporter { get; set; } = null!;
+    public virtual User UsrReporter { get; set; } = null!;
 }

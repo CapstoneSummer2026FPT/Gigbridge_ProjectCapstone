@@ -5,15 +5,15 @@ namespace Domain.Entities;
 
 public partial class JobPostSkill
 {
-    public Guid JobPostSkillsId { get; set; }
+    public Guid JpSkillJobPostSkillsId { get; set; }
 
-    public Guid JobPostsId { get; set; }
+    public Guid JpJobPostsId { get; set; }
 
-    public Guid SkillsId { get; set; }
+    public Guid SkSkillsId { get; set; }
 
     public bool? IsRequired { get; set; }
 
-    public virtual JobPost JobPosts { get; set; } = null!;
+    public virtual JobPost JpJobPosts { get; set; } = null!;
 
-    public virtual Skill Skills { get; set; } = null!;
+    public virtual Skill SkSkills { get; set; } = null!;
 }

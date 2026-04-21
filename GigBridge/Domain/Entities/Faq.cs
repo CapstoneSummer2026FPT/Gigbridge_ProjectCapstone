@@ -5,9 +5,9 @@ namespace Domain.Entities;
 
 public partial class Faq
 {
-    public Guid FaqsId { get; set; }
+    public Guid FaqFaqsId { get; set; }
 
-    public Guid FaqcategoriesId { get; set; }
+    public Guid FaqCatFaqcategoriesId { get; set; }
 
     public string Question { get; set; } = null!;
 
@@ -25,5 +25,5 @@ public partial class Faq
 
     public DateTime? UpdatedAt { get; set; }
 
-    public virtual Faqcategory Faqcategories { get; set; } = null!;
+    public virtual Faqcategory FaqCatFaqcategories { get; set; } = null!;
 }

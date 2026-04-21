@@ -5,9 +5,9 @@ namespace Domain.Entities;
 
 public partial class Education
 {
-    public Guid EducationsId { get; set; }
+    public Guid EEducationsId { get; set; }
 
-    public Guid FreelancerId { get; set; }
+    public Guid FlFreelancerId { get; set; }
 
     public string Institution { get; set; } = null!;
 
@@ -21,5 +21,5 @@ public partial class Education
 
     public string? Description { get; set; }
 
-    public virtual FreelancerProfile Freelancer { get; set; } = null!;
+    public virtual FreelancerProfile FlFreelancer { get; set; } = null!;
 }

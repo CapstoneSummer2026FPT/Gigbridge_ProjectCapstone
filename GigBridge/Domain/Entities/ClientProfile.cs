@@ -5,9 +5,9 @@ namespace Domain.Entities;
 
 public partial class ClientProfile
 {
-    public Guid ClientProfilesId { get; set; }
+    public Guid ClProClientProfilesId { get; set; }
 
-    public Guid UserId { get; set; }
+    public Guid UsrUserId { get; set; }
 
     public string? CompanyName { get; set; }
 
@@ -34,5 +34,5 @@ public partial class ClientProfile
 
     public virtual ICollection<JobPost> JobPosts { get; set; } = new List<JobPost>();
 
-    public virtual User User { get; set; } = null!;
+    public virtual User UsrUser { get; set; } = null!;
 }

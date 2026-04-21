@@ -5,11 +5,11 @@ namespace Domain.Entities;
 
 public partial class EsignSignature
 {
-    public Guid EsignSignaturesId { get; set; }
+    public Guid ESigEsignSignaturesId { get; set; }
 
-    public Guid EsignDocumentsId { get; set; }
+    public Guid EDocEsignDocumentsId { get; set; }
 
-    public Guid UserId { get; set; }
+    public Guid UsrUserId { get; set; }
 
     /// <summary>
     /// Enum ESignerRole: 0=Client, 1=Freelancer
@@ -39,7 +39,7 @@ public partial class EsignSignature
 
     public DateTime CreatedAt { get; set; }
 
-    public virtual EsignDocument EsignDocuments { get; set; } = null!;
+    public virtual EsignDocument EDocEsignDocuments { get; set; } = null!;
 
-    public virtual User User { get; set; } = null!;
+    public virtual User UsrUser { get; set; } = null!;
 }

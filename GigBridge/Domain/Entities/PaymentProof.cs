@@ -5,11 +5,11 @@ namespace Domain.Entities;
 
 public partial class PaymentProof
 {
-    public Guid PaymentProofsId { get; set; }
+    public Guid PpPaymentProofsId { get; set; }
 
-    public Guid MilestonesId { get; set; }
+    public Guid MStoneMilestonesId { get; set; }
 
-    public Guid UploadedById { get; set; }
+    public Guid UsrUploadedById { get; set; }
 
     public string FileName { get; set; } = null!;
 
@@ -30,7 +30,7 @@ public partial class PaymentProof
 
     public DateTime CreatedAt { get; set; }
 
-    public virtual Milestone Milestones { get; set; } = null!;
+    public virtual Milestone MStoneMilestones { get; set; } = null!;
 
-    public virtual User UploadedBy { get; set; } = null!;
+    public virtual User UsrUploadedBy { get; set; } = null!;
 }

@@ -5,9 +5,9 @@ namespace Domain.Entities;
 
 public partial class Certification
 {
-    public Guid CertificationsId { get; set; }
+    public Guid CerCertificationsId { get; set; }
 
-    public Guid FreelancerId { get; set; }
+    public Guid FlFreelancerId { get; set; }
 
     public string Name { get; set; } = null!;
 
@@ -19,5 +19,5 @@ public partial class Certification
 
     public string? CredentialUrl { get; set; }
 
-    public virtual FreelancerProfile Freelancer { get; set; } = null!;
+    public virtual FreelancerProfile FlFreelancer { get; set; } = null!;
 }

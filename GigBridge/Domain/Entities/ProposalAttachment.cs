@@ -5,9 +5,9 @@ namespace Domain.Entities;
 
 public partial class ProposalAttachment
 {
-    public Guid ProposalAttachmentsId { get; set; }
+    public Guid PropoAttachProposalAttachmentsId { get; set; }
 
-    public Guid ProposalsId { get; set; }
+    public Guid PropoProposalsId { get; set; }
 
     public string FileName { get; set; } = null!;
 
@@ -17,5 +17,5 @@ public partial class ProposalAttachment
 
     public DateTime CreatedAt { get; set; }
 
-    public virtual Proposal Proposals { get; set; } = null!;
+    public virtual Proposal PropoProposals { get; set; } = null!;
 }

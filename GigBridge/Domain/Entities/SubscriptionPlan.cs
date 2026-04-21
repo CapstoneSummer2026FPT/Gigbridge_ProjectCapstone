@@ -5,7 +5,7 @@ namespace Domain.Entities;
 
 public partial class SubscriptionPlan
 {
-    public Guid SubscriptionPlansId { get; set; }
+    public Guid SubPlanSubscriptionPlansId { get; set; }
 
     public string Name { get; set; } = null!;
 
@@ -34,5 +34,5 @@ public partial class SubscriptionPlan
 
     public DateTime? UpdatedAt { get; set; }
 
-    public virtual ICollection<Subscription> Subscriptions { get; set; } = new List<Subscription>();
+    public virtual ICollection<Subscription1> Subscription1s { get; set; } = new List<Subscription1>();
 }

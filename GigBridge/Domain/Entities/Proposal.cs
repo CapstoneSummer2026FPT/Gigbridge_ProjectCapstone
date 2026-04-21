@@ -5,11 +5,11 @@ namespace Domain.Entities;
 
 public partial class Proposal
 {
-    public Guid ProposalsId { get; set; }
+    public Guid PropoProposalsId { get; set; }
 
-    public Guid JobPostsId { get; set; }
+    public Guid JpJobPostsId { get; set; }
 
-    public Guid FreelancerProfilesId { get; set; }
+    public Guid FlProFreelancerProfilesId { get; set; }
 
     public string? CoverLetter { get; set; }
 
@@ -32,9 +32,9 @@ public partial class Proposal
 
     public virtual Contract? Contract { get; set; }
 
-    public virtual FreelancerProfile FreelancerProfiles { get; set; } = null!;
+    public virtual FreelancerProfile FlProFreelancerProfiles { get; set; } = null!;
 
-    public virtual JobPost JobPosts { get; set; } = null!;
+    public virtual JobPost JpJobPosts { get; set; } = null!;
 
     public virtual ICollection<ProposalAttachment> ProposalAttachments { get; set; } = new List<ProposalAttachment>();
 }

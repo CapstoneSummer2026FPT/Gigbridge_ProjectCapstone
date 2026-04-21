@@ -5,15 +5,15 @@ namespace Domain.Entities;
 
 public partial class SavedFreelancer
 {
-    public Guid SavedFreelancersId { get; set; }
+    public Guid SfSavedFreelancersId { get; set; }
 
-    public Guid UserId { get; set; }
+    public Guid UsrUserId { get; set; }
 
-    public Guid FreelancerProfilesId { get; set; }
+    public Guid FlProFreelancerProfilesId { get; set; }
 
     public DateTime CreatedAt { get; set; }
 
-    public virtual FreelancerProfile FreelancerProfiles { get; set; } = null!;
+    public virtual FreelancerProfile FlProFreelancerProfiles { get; set; } = null!;
 
-    public virtual User User { get; set; } = null!;
+    public virtual User UsrUser { get; set; } = null!;
 }

@@ -5,9 +5,9 @@ namespace Domain.Entities;
 
 public partial class Notification
 {
-    public Guid NotificationsId { get; set; }
+    public Guid NotiNotificationsId { get; set; }
 
-    public Guid UserId { get; set; }
+    public Guid UsrUserId { get; set; }
 
     /// <summary>
     /// Enum NotificationType: 0=NewJob, 1=ProposalReceived, 2=ProposalStatusChanged, 3=ContractStarted, 4=MilestoneUpdated, 5=PaymentProofUploaded, 6=PaymentConfirmed, 7=ChatMessage, 8=DisputeUpdate, 9=ReviewReceived, 10=SystemAlert, 11=AIInterviewInvite, 12=SubscriptionExpiring
@@ -28,5 +28,5 @@ public partial class Notification
 
     public DateTime CreatedAt { get; set; }
 
-    public virtual User User { get; set; } = null!;
+    public virtual User UsrUser { get; set; } = null!;
 }

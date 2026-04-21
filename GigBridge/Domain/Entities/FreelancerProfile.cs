@@ -5,9 +5,9 @@ namespace Domain.Entities;
 
 public partial class FreelancerProfile
 {
-    public Guid FreelancerProfilesId { get; set; }
+    public Guid FlProFreelancerProfilesId { get; set; }
 
-    public Guid UserId { get; set; }
+    public Guid UsrUserId { get; set; }
 
     public string? Title { get; set; }
 
@@ -49,7 +49,7 @@ public partial class FreelancerProfile
 
     public virtual ICollection<SavedFreelancer> SavedFreelancers { get; set; } = new List<SavedFreelancer>();
 
-    public virtual User User { get; set; } = null!;
+    public virtual User UsrUser { get; set; } = null!;
 
     public virtual ICollection<WorkExperience> WorkExperiences { get; set; } = new List<WorkExperience>();
 }

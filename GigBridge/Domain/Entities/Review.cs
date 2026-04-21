@@ -5,13 +5,13 @@ namespace Domain.Entities;
 
 public partial class Review
 {
-    public Guid ReviewsId { get; set; }
+    public Guid RevReviewsId { get; set; }
 
-    public Guid ContractsId { get; set; }
+    public Guid ContContractsId { get; set; }
 
-    public Guid ReviewerId { get; set; }
+    public Guid UsrReviewerId { get; set; }
 
-    public Guid RevieweeId { get; set; }
+    public Guid UsrRevieweeId { get; set; }
 
     public int Rating { get; set; }
 
@@ -29,9 +29,9 @@ public partial class Review
 
     public DateTime? UpdatedAt { get; set; }
 
-    public virtual Contract Contracts { get; set; } = null!;
+    public virtual Contract ContContracts { get; set; } = null!;
 
-    public virtual User Reviewee { get; set; } = null!;
+    public virtual User UsrReviewee { get; set; } = null!;
 
-    public virtual User Reviewer { get; set; } = null!;
+    public virtual User UsrReviewer { get; set; } = null!;
 }

@@ -5,9 +5,9 @@ namespace Domain.Entities;
 
 public partial class Milestone
 {
-    public Guid MilestonesId { get; set; }
+    public Guid MStoneMilestonesId { get; set; }
 
-    public Guid ContractsId { get; set; }
+    public Guid ContContractsId { get; set; }
 
     public string Title { get; set; } = null!;
 
@@ -32,7 +32,7 @@ public partial class Milestone
 
     public DateTime? UpdatedAt { get; set; }
 
-    public virtual Contract Contracts { get; set; } = null!;
+    public virtual Contract ContContracts { get; set; } = null!;
 
     public virtual ICollection<Dispute> Disputes { get; set; } = new List<Dispute>();
 

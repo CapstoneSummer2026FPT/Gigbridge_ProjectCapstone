@@ -5,7 +5,7 @@ namespace Domain.Entities;
 
 public partial class PlatformSetting
 {
-    public Guid PlatformSettingsId { get; set; }
+    public Guid PsPlatformSettingsId { get; set; }
 
     public string Key { get; set; } = null!;
 
