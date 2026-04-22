@@ -110,3 +110,9 @@ GigBridge/.vs/GigBridge/v17/.wsuo
 *.db-shm
 *.db-wal
 *.sql
+GigBridge/.vs/GigBridge/v17/DocumentLayout.backup.json
+GigBridge/.vs/GigBridge/v17/DocumentLayout.json
+GigBridge/.vs/ProjectSettings.json
+GigBridge/.vs/VSWorkspaceState.json
+GigBridge/Project_API/appsettings.Development.json
+GigBridge/Project_API/appsettings.json
