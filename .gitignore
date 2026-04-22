@@ -100,7 +100,6 @@ BE/**/*.md
 *.db
 *.vsidx
 *.v2
-*.json
 GigBridge/.vs/GigBridge/v17/.suo
 *.bin
 *.user
