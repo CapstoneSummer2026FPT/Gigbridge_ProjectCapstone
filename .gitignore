@@ -17,3 +17,6 @@ Thumbs.db
 .skillsrc
 *.sql
 *.md
+*.db
+*.vsidx
+.vs/Gigbridge_ProjectCapstone/v17/.wsuo
