@@ -1,0 +1,92 @@
+## .NET Backend – GigBridge
+## Scoped to GigBridge/ — paths are relative to this folder.
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+
+# MSBuild
+*.binlog
+
+# MSTest / NUnit results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.VisualState.xml
+TestResult.xml
+nunit-*.xml
+TestResults/
+coverage/
+
+# Others
+~$*
+*~
+CodeCoverage/
+
+# ==================== Sensitive configuration ====================
+
+# Environment-specific appsettings (never commit secrets)
+Project_API/appsettings.Development.json
+Project_API/appsettings.Local.json
+Project_API/appsettings.Production.json
+Project_API/appsettings.Staging.json
+Project_API/appsettings.json
+**/appsettings.*.json
+
+# User Secrets
+**/secrets.json
+**/connectionstrings.json
+**/*.secret
+*.pem
+*.key
+*.pfx
+
+# ==================== Visual Studio / IDE ====================
+
+.vs/
+*.user
+*.suo
+*.db
+*.db-shm
+*.db-wal
+
+# VS Copilot / index files
+*.vsidx
+*.v2
+*.bin
+
+# ==================== Project-specific gitkeeps ====================
+
+Infrastructure/Persistence/Configurations/.gitkeep
+Domain/Enums/.gitkeep
+
+# ==================== Misc ====================
+
+*.log
+.DS_Store
+Thumbs.db
+*.md
+*.sql
